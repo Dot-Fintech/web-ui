@@ -1,0 +1,67 @@
+{
+  "name": "@dot-fintech/web-ui",
+  "version": "1.0.4",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:Dot-Fintech/web-ui.git",
+  "author": "Christopher Krogh <chris.krogh@outlook.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "webpack",
+    "build-storybook": "build-storybook",
+    "postbuild": "tsc -p tsconfig.build.json",
+    "semantic-release": "semantic-release",
+    "storybook": "start-storybook -p 6006"
+  },
+  "dependencies": {
+    "@atlaskit/spinner": "^15.0.8",
+    "@atlaskit/tooltip": "^17.2.0",
+    "@ionic/react": "^5.6.6",
+    "ionicons": "^5.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-modal": "^3.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.4",
+    "@types/react-infinite-scroll-component": "^4.2.5",
+    "@types/react-modal": "^3.12.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "prettier": "^2.3.0",
+    "semantic-release": "^17.4.2",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^4.2.4",
+    "typescript-declaration-webpack-plugin": "^0.2.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
