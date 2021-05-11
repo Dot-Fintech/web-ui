@@ -12,7 +12,7 @@ To add web-ui to a react app, install the package using
 
 ```npm i @dot-fintech/web-ui``` or ```yarn add @dot-fintech/web-ui```
 
-Also, the components in this library rely on the styled-components `DefaultTheme` to be overridden to use the `Theme` type defined in it this package. 
+To access the theme using styled-components, you need to override the `DefaultTheme` to use the `Theme` type defined in this package. 
 To set this type, create a declaration file for styled components with the following:
 
 ```
