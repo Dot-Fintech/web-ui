@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nodeExternals = require('webpack-node-externals');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -12,6 +13,7 @@ module.exports = {
   target: 'node',
   externals: [nodeExternals()],
   plugins: [
+    new CircularDependencyPlugin(),
     new MiniCssExtractPlugin({ filename: 'index.css' }),
     new TypescriptDeclarationPlugin(),
   ],

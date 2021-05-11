@@ -2,9 +2,10 @@ import { IonIcon } from '@ionic/react';
 import { alert, closeCircle } from 'ionicons/icons';
 import React from 'react';
 import styled from 'styled-components';
-import { Colors } from 'utils';
 
-import { Button, Row, Spacer } from '..';
+import Button from '../Button';
+import Row from '../Row';
+import Spacer from '../Spacer';
 
 type ContainerProps = {
   color: string;

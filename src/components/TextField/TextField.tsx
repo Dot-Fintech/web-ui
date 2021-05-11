@@ -5,7 +5,8 @@ import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Color } from 'theme';
 
-import { Row, Spacer } from '..';
+import Row from '../Row';
+import Spacer from '../Spacer';
 
 type ContainerProps = {
   borderColor: Color;
