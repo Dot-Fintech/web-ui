@@ -1,13 +1,14 @@
 {
   "name": "@dot-fintech/web-ui",
-  "version": "1.0.4",
+  "version": "0.0.0-development",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "@types/index.d.ts",
   "repository": "git@github.com:Dot-Fintech/web-ui.git",
   "author": "Christopher Krogh <chris.krogh@outlook.com>",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "@types"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
