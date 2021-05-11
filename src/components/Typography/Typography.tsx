@@ -1,7 +1,7 @@
 import React from 'react';
-import type { Color } from 'theme';
-import type { TypographyTag } from 'types';
 
+import type { Color } from '../../theme';
+import type { TypographyTag } from '../../types';
 import type { TextAlignOption, TextTransformOption } from './Tag';
 import Tag from './Tag';
 

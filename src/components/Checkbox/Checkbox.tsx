@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Color } from 'theme';
+
+import { Color } from '../../theme';
 
 const SIZE = 20;
 

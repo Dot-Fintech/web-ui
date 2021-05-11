@@ -1,8 +1,8 @@
 import './Modal.css';
 
 import type { Meta, Story } from '@storybook/react';
-import { ThemeProvider } from 'theme';
 
+import { ThemeProvider } from '../../theme';
 import type { Props } from './Modal';
 import Modal from './Modal';
 

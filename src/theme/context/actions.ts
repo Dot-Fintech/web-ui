@@ -1,4 +1,4 @@
-import type { ThemeName } from 'theme/types';
+import type { ThemeName } from '../../theme/types';
 
 enum ActionTypes {
   SET_THEME,

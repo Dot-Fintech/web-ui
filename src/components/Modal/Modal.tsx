@@ -4,8 +4,8 @@ import type { CSSProperties } from 'react';
 import React from 'react';
 import ReactModal from 'react-modal';
 import styled, { useTheme } from 'styled-components';
-import { breakpoints } from 'utils';
 
+import { breakpoints } from '../../utils';
 import Button from '../Button';
 
 const MOBILE_STYLES: CSSProperties = {

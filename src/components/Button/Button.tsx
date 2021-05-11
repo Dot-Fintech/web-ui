@@ -1,8 +1,9 @@
 import type { ButtonHTMLAttributes } from 'react';
 import React from 'react';
 import styled from 'styled-components';
-import { Color } from 'theme';
-import { Colors } from 'utils';
+
+import { Color } from '../../theme';
+import { Colors } from '../../utils';
 
 type ContainerProps = {
   variant?: 'text' | 'icon';

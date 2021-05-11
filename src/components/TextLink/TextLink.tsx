@@ -2,7 +2,8 @@ import type { AnchorHTMLAttributes } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from 'styled-components';
-import type { TypographyTag } from 'types';
+
+import type { TypographyTag } from '../../types';
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
   tag: TypographyTag;

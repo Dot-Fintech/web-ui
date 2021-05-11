@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import type { ThemeTypography } from 'theme/typography';
+
+import type { ThemeTypography } from '../../theme/typography';
 
 export type TextTransformOption = 'capitalize' | 'lowercase' | 'uppercase';
 export type TextAlignOption = 'left' | 'right' | 'center' | 'justify';

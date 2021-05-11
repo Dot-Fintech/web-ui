@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/react';
-import { ThemeProvider } from 'theme';
 
+import { ThemeProvider } from '../../theme';
 import type { Props } from './Typography';
 import Typography from './Typography';
 

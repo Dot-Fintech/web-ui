@@ -1,7 +1,7 @@
 import type { Meta, Story } from '@storybook/react';
 import { useState } from 'react';
-import { ThemeProvider } from 'theme';
 
+import { ThemeProvider } from '../../theme';
 import type { Props } from './Checkbox';
 import Checkbox from './Checkbox';
 

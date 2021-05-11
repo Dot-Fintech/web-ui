@@ -3,8 +3,8 @@ import { search as searchIcon } from 'ionicons/icons';
 import type { InputHTMLAttributes } from 'react';
 import React from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Color } from 'theme';
 
+import { Color } from '../../theme';
 import Row from '../Row';
 import Spacer from '../Spacer';
 

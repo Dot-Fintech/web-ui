@@ -1,4 +1,4 @@
-import { Color } from 'theme/colors';
+import { Color } from '../../theme/colors';
 
 export const Colors = {
   white: new Color({ r: 255, g: 255, b: 255 }),

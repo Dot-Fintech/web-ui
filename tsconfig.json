@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "src",
     "declaration": true,
     "outDir": "dist",
     "lib": ["dom", "dom.iterable", "esnext"],

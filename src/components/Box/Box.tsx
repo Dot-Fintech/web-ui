@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import type { AlignmentValue } from 'types';
+
+import type { AlignmentValue } from '../../types';
 
 export type Props = {
   flexDirection: 'column' | 'row';
