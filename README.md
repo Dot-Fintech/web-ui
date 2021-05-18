@@ -4,16 +4,16 @@ A shared ui library of React components that is used by all of Dot's frontend we
 
 ## Demo
 
-*Coming soon*
+_Coming soon_
 
 ## Usage
 
-To add web-ui to a react app, install the package using 
+To add web-ui to a react app, install the package using
 
-```npm i @dot-fintech/web-ui``` or ```yarn add @dot-fintech/web-ui```
+`yarn add @dot-fintech/web-ui` or `npm i @dot-fintech/web-ui`
 
-To access the theme using styled-components, you need to override the `DefaultTheme` to use the `Theme` type defined in this package. 
-To set this type, create a declaration file for styled components with the following:
+To access the theme inside styled-components, you need to override the `DefaultTheme` to use the `Theme` type defined in this package.
+To do this, create a declaration file for styled components with the following:
 
 ```
 import 'styled-components';
