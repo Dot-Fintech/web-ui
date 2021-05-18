@@ -6,7 +6,7 @@ import { Color } from '../../theme';
 import { Colors } from '../../utils';
 
 type ContainerProps = {
-  variant?: 'text' | 'icon';
+  variant?: 'default' | 'lean';
   width?: number;
   height?: number;
 };
@@ -16,26 +16,26 @@ const Container = styled.button<ContainerProps>`
   justify-content: 'center';
   align-items: 'center';
 
-  min-width: ${({ variant }) => (variant === 'icon' ? 'none' : '64px')};
-  min-height: ${({ variant }) => (variant === 'icon' ? 'none' : '40px')};
+  min-width: ${({ variant }) => (variant === 'lean' ? 'none' : '64px')};
+  min-height: ${({ variant }) => (variant === 'lean' ? 'none' : '40px')};
   ${({ width }) => (width ? `width: ${width}px;` : '')}
   ${({ height }) => (height ? `height: ${height}px;` : '')}
 
   border-radius: 3px;
   border: none;
-  padding: ${({ variant }) => (variant === 'icon' ? 0 : '8px')};
+  padding: ${({ variant }) => (variant === 'lean' ? 0 : '8px')};
   cursor: pointer;
 
   background-color: ${({ color, variant, theme }) =>
     color ??
-    (variant === 'icon'
+    (variant === 'lean'
       ? Colors.transparent.toString()
       : theme.colors.main.secondary.toString())};
 
   :disabled {
     background-color: ${({ color, variant, theme }) =>
       color ??
-      (variant === 'icon'
+      (variant === 'lean'
         ? Colors.transparent.toString()
         : theme.colors.main.secondary.toString())};
   }
@@ -55,22 +55,20 @@ const Text = styled.p<TextProps>`
   margin: 0;
 `;
 
-export type Props = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> & {
-  variant?: 'text' | 'icon';
-  width?: number;
-  height?: number;
-  color?: Color;
-};
+export type Props = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> &
+  ContainerProps & {
+    color?: Color;
+  };
 
 const Button: React.FC<Props> = ({
   children,
   color,
-  variant = 'text',
+  variant = 'default',
   ...props
 }) => {
   return (
     <Container {...props} color={color?.toString()} variant={variant}>
-      {variant === 'text' ? (
+      {variant === 'default' ? (
         <Text disabled={props.disabled}>{children}</Text>
       ) : (
         children

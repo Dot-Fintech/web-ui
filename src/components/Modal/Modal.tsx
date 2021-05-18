@@ -49,7 +49,7 @@ const Modal: React.FC<Props> = ({ isOpen, close, children }) => {
         },
       }}
     >
-      <CloseButton variant="icon" onClick={close}>
+      <CloseButton variant="lean" onClick={close}>
         <IonIcon
           icon={closeCircle}
           color={theme.name === 'light' ? 'dark' : 'light'}
