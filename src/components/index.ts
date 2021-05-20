@@ -14,6 +14,8 @@ export { default as InfiniteScroll } from './InfiniteScroll';
 
 export { default as Modal } from './Modal';
 
+export { default as Photo } from './Photo';
+
 export { default as Row } from './Row';
 
 export { default as Spacer } from './Spacer';
