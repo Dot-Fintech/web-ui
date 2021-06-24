@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import type { ThemeTypography } from '../../theme/typography';
 
@@ -12,11 +12,14 @@ type Props = {
 };
 
 const Tag = styled.span<Props>`
-  font-family: ${({ tag, theme }) => theme.typography[tag].fontFamily};
-  font-size: ${({ tag, theme }) => theme.typography[tag].fontSize}px;
-  font-weight: ${({ tag, theme }) => theme.typography[tag].fontWeight};
-  line-height: ${({ tag, theme }) => theme.typography[tag].lineHeight}px;
-  letter-spacing: ${({ tag, theme }) => theme.typography[tag].letterSpacing}px;
+  ${({ tag, theme }) =>
+    css`
+      font-family: theme.typography[tag].fontFamily;
+      font-size: ${theme.typography[tag].fontFamily};
+      font-weight: ${theme.typography[tag].fontFamily};
+      line-height: ${theme.typography[tag].fontFamily};
+      letter-spacing: ${theme.typography[tag].fontFamily};
+    `};
   text-transform: ${({ textTransform }) => textTransform};
   text-align: ${({ textAlign }) => textAlign};
   color: ${({ color, theme }) =>
