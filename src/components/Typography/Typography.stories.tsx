@@ -18,6 +18,4 @@ export const Playground: Story<Props> = (args) => {
     </ThemeProvider>
   );
 };
-Playground.args = {
-  tag: 'h1',
-};
+Playground.args = {};
