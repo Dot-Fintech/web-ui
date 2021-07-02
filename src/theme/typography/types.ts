@@ -12,5 +12,6 @@ export type ThemeTypography = {
   h3: TagSettings;
   h4: TagSettings;
   h5: TagSettings;
+  h6: TagSettings;
   p: TagSettings;
 };

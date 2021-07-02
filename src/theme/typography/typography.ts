@@ -36,6 +36,13 @@ export const typography: ThemeTypography = {
     lineHeight: 24,
     letterSpacing: 0.5,
   },
+  h6: {
+    fontFamily: 'Source Sans Pro',
+    fontSize: 18,
+    fontWeight: 300,
+    lineHeight: 20,
+    letterSpacing: 0.325,
+  },
   p: {
     fontFamily: 'Roboto',
     fontSize: 14,
