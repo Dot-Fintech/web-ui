@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { typography } from 'theme/typography';
 
+import { typography } from '../typography';
 import { ThemeTypography } from '../typography/types';
 
 const tags = Object.keys(typography) as (keyof ThemeTypography)[];
