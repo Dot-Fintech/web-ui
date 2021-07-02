@@ -9,10 +9,10 @@ const GlobalStyle = createGlobalStyle`
       tags.map(
         (tag) => `${tag} {
           font-family: ${theme.typography[tag].fontFamily};
-          font-size: ${theme.typography[tag].fontFamily};
-          font-weight: ${theme.typography[tag].fontFamily};
-          line-height: ${theme.typography[tag].fontFamily};
-          letter-spacing: ${theme.typography[tag].fontFamily};
+          font-size: ${theme.typography[tag].fontSize}px;
+          font-weight: ${theme.typography[tag].fontWeight};
+          line-height: ${theme.typography[tag].lineHeight}px;
+          letter-spacing: ${theme.typography[tag].letterSpacing}px;
         }`,
       )}
 `;
