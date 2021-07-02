@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import { typography } from 'theme/typography';
 
 import { ThemeTypography } from '../typography/types';
 
-const tags: (keyof ThemeTypography)[] = ['h1', 'h2', 'h3', 'h4', 'h5', 'p'];
+const tags = Object.keys(typography) as (keyof ThemeTypography)[];
 
 const GlobalStyle = createGlobalStyle`
     ${({ theme }) =>
