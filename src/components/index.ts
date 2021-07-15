@@ -10,6 +10,8 @@ export { default as Column } from './Column';
 
 export { default as Divider } from './Divider';
 
+export { default as ErrorBoundary } from './ErrorBoundary';
+
 export { default as InfiniteScroll } from './InfiniteScroll';
 
 export { default as Modal } from './Modal';
