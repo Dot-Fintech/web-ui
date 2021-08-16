@@ -11,7 +11,7 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
   to: string;
 };
 
-const TextLink: React.FC<Props> = ({ tag, to, children, ...props }) => {
+const TextLink: React.FC<Props> = ({ tag, children, ...props }) => {
   const theme = useTheme();
 
   return (
@@ -22,7 +22,6 @@ const TextLink: React.FC<Props> = ({ tag, to, children, ...props }) => {
         lineHeight: `${theme.typography[tag].lineHeight}px`,
       }}
       color={theme.colors.textLink.primary.toString()}
-      to={to}
     >
       {children}
     </Link>

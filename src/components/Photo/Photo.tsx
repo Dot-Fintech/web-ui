@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type WrapperProps = {
   size: number;
@@ -10,10 +10,12 @@ const Wrapper = styled.div<WrapperProps>`
   justify-content: center;
   align-items: center;
 
-  min-width: ${({ size }) => size}px;
-  min-height: ${({ size }) => size}px;
-  max-width: ${({ size }) => size}px;
-  max-height: ${({ size }) => size}px;
+  ${({ size }) => css`
+    min-width: ${size}px;
+    min-height: ${size}px;
+    max-width: ${size}px;
+    max-height: ${size}px;
+  `}
   border-radius: ${({ circular, size }) =>
     circular ? `${size / 2}px` : 'none'};
   overflow: hidden;
