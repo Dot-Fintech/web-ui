@@ -10,7 +10,10 @@ export type State = {
 export const THEME_KEY = 'theme';
 
 export const initialState: State = {
-  theme: localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light',
+  theme:
+    window && window.localStorage.getItem(THEME_KEY) === 'dark'
+      ? 'dark'
+      : 'light',
   setTheme: (theme: ThemeName) => {
     void theme;
   },

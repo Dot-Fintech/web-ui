@@ -9,7 +9,9 @@ const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
   const setTheme = (theme: ThemeName) => {
-    localStorage.setItem(THEME_KEY, theme);
+    if (window) {
+      window.localStorage.setItem(THEME_KEY, theme);
+    }
     dispatch({ type: ActionTypes.SET_THEME, payload: theme });
   };
 
