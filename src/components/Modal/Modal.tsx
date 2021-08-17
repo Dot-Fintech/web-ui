@@ -18,7 +18,7 @@ const MOBILE_STYLES: CSSProperties = {
   padding: 0,
   borderRadius: 0,
   width: '100vw',
-  height: window.innerHeight,
+  height: '100vh',
 };
 
 const CloseButton = styled(Button)`
@@ -35,7 +35,7 @@ export type Props = {
 const Modal: React.FC<Props> = ({ isOpen, close, children }) => {
   const theme = useTheme();
 
-  const isMobile = window.innerWidth < breakpoints.sm;
+  const isMobile = window ? window.innerWidth < breakpoints.sm : false;
 
   return (
     <ReactModal

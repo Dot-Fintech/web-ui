@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 
 import { ThemeName } from '../types';
 import ActionTypes from './actions';
@@ -7,6 +7,12 @@ import { initialState, THEME_KEY, ThemeContext } from './state';
 
 const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
+
+  useEffect(() => {
+    if (window && window.localStorage.getItem(THEME_KEY) === 'dark') {
+      dispatch({ type: ActionTypes.SET_THEME, payload: 'dark' });
+    }
+  });
 
   const setTheme = (theme: ThemeName) => {
     if (window) {
