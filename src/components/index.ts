@@ -14,6 +14,8 @@ export { default as ErrorBoundary } from './ErrorBoundary';
 
 export { default as InfiniteScroll } from './InfiniteScroll';
 
+export { default as Logo } from './Logo';
+
 export { default as Modal } from './Modal';
 
 export { default as Photo } from './Photo';
