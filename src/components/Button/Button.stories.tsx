@@ -1,4 +1,5 @@
 import type { Meta, Story } from '@storybook/react';
+import { Typography } from 'components';
 
 import { ThemeProvider } from '../../theme';
 import type { Props } from './Button';
@@ -9,7 +10,7 @@ export default {
   component: Button,
 } as Meta;
 
-export const Playground: Story<Props> = (args) => {
+export const Default: Story<Props> = (args) => {
   return (
     <ThemeProvider>
       <div style={{ width: 400 }}>
@@ -18,4 +19,17 @@ export const Playground: Story<Props> = (args) => {
     </ThemeProvider>
   );
 };
-Playground.args = {};
+Default.args = {};
+
+export const Lean: Story<Props> = (args) => {
+  return (
+    <ThemeProvider>
+      <div style={{ width: 400 }}>
+        <Button {...args}>
+          <Typography as="p">Continue</Typography>
+        </Button>
+      </div>
+    </ThemeProvider>
+  );
+};
+Lean.args = {};
