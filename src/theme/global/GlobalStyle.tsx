@@ -1,13 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { typography } from '../typography';
 import { ThemeTypography } from '../typography/types';
-
-const tags = Object.keys(typography) as (keyof ThemeTypography)[];
 
 const GlobalStyle = createGlobalStyle`
     ${({ theme }) =>
-      tags.map(
+      (Object.keys(theme.typography) as (keyof ThemeTypography)[]).map(
         (tag) => `${tag} {
           font-family: ${theme.typography[tag].fontFamily};
           font-size: ${theme.typography[tag].fontSize}px;
