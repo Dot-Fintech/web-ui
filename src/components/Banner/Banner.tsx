@@ -59,7 +59,7 @@ const Banner: React.FC<Props> = ({
         )}
         <Text>{children}</Text>
       </Row>
-      <Button variant="lean" onClick={close}>
+      <Button onClick={close}>
         <Icon color="light" icon={closeCircle} size="medium" />
       </Button>
     </Container>
