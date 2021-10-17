@@ -1,3 +1,5 @@
+export { default as Anchor } from './_text/Anchor';
+
 export { default as Banner } from './Banner';
 
 export { default as Button } from './Button';
@@ -30,7 +32,7 @@ export { default as TextLink } from './TextLink';
 
 export { default as Tooltip } from './Tooltip';
 
-export { default as Typography } from './Typography';
+export { default as Typography } from './_text/Typography';
 
 export { default as Vector } from './Vector';
 export * from './Vector';
