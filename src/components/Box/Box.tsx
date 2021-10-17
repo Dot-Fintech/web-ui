@@ -7,12 +7,14 @@ export type Props = {
   justifyContent?: AlignmentValue;
   alignItems?: AlignmentValue;
   fullWidth?: boolean;
+  reverse?: boolean;
 };
 
 /** DO NOT USE THIS COMPONENT. Use Row and Column instead */
 const Box = styled.div<Props>`
   display: flex;
-  flex-direction: ${({ flexDirection }) => flexDirection};
+  flex-direction: ${({ flexDirection, reverse }) =>
+    reverse ? `${flexDirection}-reverse` : flexDirection};
   justify-content: ${({ justifyContent }) => justifyContent ?? 'flex-start'};
   align-items: ${({ alignItems }) => alignItems ?? 'flex-start'};
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};

@@ -4,7 +4,8 @@ import React from 'react';
 import type { Props as BoxProps } from '../Box';
 import Box from '../Box';
 
-type Props = Omit<BoxProps, 'flexDirection'> & HTMLAttributes<HTMLDivElement>;
+export type Props = Omit<BoxProps, 'flexDirection'> &
+  HTMLAttributes<HTMLDivElement>;
 
 const Row: React.FC<Props> = ({ children, ...props }) => {
   return (
