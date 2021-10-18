@@ -8,6 +8,11 @@ import { initialState, THEME_KEY, ThemeContext } from './state';
 const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
+  const setTheme = (theme: ThemeName) => {
+    window?.localStorage.setItem(THEME_KEY, theme);
+    dispatch({ type: ActionTypes.SET_THEME, payload: theme });
+  };
+
   useEffect(() => {
     const storedTheme = window?.localStorage.getItem(THEME_KEY);
     if (
@@ -16,16 +21,9 @@ const Provider: React.FC = ({ children }) => {
         (!storedTheme &&
           window?.matchMedia('(prefers-color-scheme: dark)').matches))
     ) {
-      dispatch({ type: ActionTypes.SET_THEME, payload: 'dark' });
+      setTheme('dark');
     }
   }, []);
-
-  const setTheme = (theme: ThemeName) => {
-    if (window) {
-      window.localStorage.setItem(THEME_KEY, theme);
-    }
-    dispatch({ type: ActionTypes.SET_THEME, payload: theme });
-  };
 
   return (
     <ThemeContext.Provider
