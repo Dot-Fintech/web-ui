@@ -9,10 +9,12 @@ const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
   useEffect(() => {
+    const storedTheme = window?.localStorage.getItem(THEME_KEY);
     if (
-      window &&
-      window.localStorage.getItem(THEME_KEY) === 'dark' &&
-      state.theme !== 'dark'
+      state.theme !== 'dark' &&
+      (storedTheme === 'dark' ||
+        (!storedTheme &&
+          window?.matchMedia('(prefers-color-scheme: dark)').matches))
     ) {
       dispatch({ type: ActionTypes.SET_THEME, payload: 'dark' });
     }
